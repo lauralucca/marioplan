@@ -8,16 +8,6 @@ class CreateProject extends Component {
         content: ''
     }
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.id]: e.target.value
-        })
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault()
-        this.props.createProject(this.state)
-    }
     render() {
         return (
             <div className="container">
@@ -37,6 +27,17 @@ class CreateProject extends Component {
                 </form>
             </div>
         )
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+    
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.props.createProject(this.state)
     }
 }
 
